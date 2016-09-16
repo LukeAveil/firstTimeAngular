@@ -1,3 +1,13 @@
 toDoApp.controller('ToDoController', function() {
-  this.todo = "ToDo1";
+  var self = this;
+
+  self.todos = [];
+
+  self.addToDo = function(todoText) {
+    self.todos.push({task: todoText, completed: false});
+  };
+
+  self.removeToDo = function () {
+    self.todos.pop();
+  };
 });
